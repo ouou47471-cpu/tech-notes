@@ -272,6 +272,46 @@ window.portfolioDataFallback = {
       ],
       "highlight": "标注同步增广 + 控制变量 A/B + 诚实的局限说明",
       "detailMarkdown": "/public/projects/pcba-defect-detection-repro/README.md"
+    },
+    {
+      "id": "ecommerce-spark-analysis",
+      "number": "07",
+      "title": "基于 PySpark 的电商经营分析与用户价值分层",
+      "type": "数据分析项目 / 大数据分析",
+      "role": "独立完成（数据建模、指标计算、可视化）",
+      "period": "2026.08",
+      "stack": [
+        "PySpark",
+        "Spark SQL",
+        "DataFrame API",
+        "Pandas",
+        "Matplotlib",
+        "RFM",
+        "Olist"
+      ],
+      "summary": "用 PySpark 处理 2016–2018 年约 10 万条巴西电商订单（Olist 六表关联），构建订单级与商品行级双层宽表，完成区域、趋势、品类、客户结构四维经营分析，并用 RFM 把 9.47 万真实客户分成四层，全程本地 Spark 会话即可跑通。",
+      "challenge": [
+        "Olist 的 customer_id 是订单级一次性 ID，直接聚合会把订单当成客户，复购率恒为 0。",
+        "多商品订单的支付金额会被重复累加，区域/趋势与品类分析的 GMV 口径必须分开。",
+        "数据同时存在 Kaggle 原版与镜像两种时间戳格式，混用会静默丢行。",
+        "RFM 的频次 F 高度集中在 1 次，用 ntile 四分位会把同值客户随机拆到不同层。",
+        "首尾是不完整月份，订单量低会把环比增长率放大成假信号。"
+      ],
+      "solution": [
+        "改用 customer_unique_id 识别真实客户（9.47 万人），得到真实频次与 3.0% 复购率。",
+        "构建订单级宽表（区域/趋势/RFM）与商品行级宽表（品类，GMV = price + freight_value）双层口径。",
+        "时间戳同时兼容 yyyy-MM-dd 与 yyyy/MM/dd，并输出解析失败行数做自检。",
+        "RFM 采用混合打分：R、M 用四分位 ntile，F 改用阈值打分（≥4/3/2/1 次对应 4/3/2/1 分）。",
+        "剔除首尾非完整月份后重算环比；支付金额按订单聚合、剔除异常金额并保留剔除日志。"
+      ],
+      "impact": [
+        "区域：圣保罗州 GMV 约 585 万 BRL、4.1 万单，是第二名里约州（209 万）的约 2.8 倍；头部三州贡献约 62% 营收。",
+        "品类：health_beauty（144 万）、watches_gifts（129 万）、bed_bath_table（124 万）为 GMV 前三，watches_gifts 件均价最高（约 218 BRL）。",
+        "趋势：2017 年 11 月黑五单月 GMV 达 116.7 万 BRL 峰值，2018 年月均稳定在 100 万以上，客单价约 160 BRL。",
+        "客户：真实客户 9.47 万、复购率仅 3.0%；RFM 高价值客户 603 人、人均 436 BRL，是低价值客户（57 BRL）的 7 倍以上。"
+      ],
+      "highlight": "真实客户识别 + GMV 双层口径 + 混合打分 RFM",
+      "detailMarkdown": "/public/projects/ecommerce-spark-analysis/README.md"
     }
   ],
   "notes": [
