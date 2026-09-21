@@ -29,7 +29,7 @@
 
 ## 评测架构
 
-![Agent Eval Workbench 架构](/public/projects/agent-eval-workbench/architecture.png)
+![Agent Eval Workbench 架构](public/projects/agent-eval-workbench/architecture.png)
 
 输入包含两部分：
 
@@ -104,7 +104,7 @@
 
 LLM 版剩余两个错误都集中在 `get_alerts` 与 `get_comprehensive_alerts` 的粒度边界。
 
-![规则版与 LLM 版对比](/public/projects/agent-eval-workbench/comparison.png)
+![规则版与 LLM 版对比](public/projects/agent-eval-workbench/comparison.png)
 
 ## 增强能力基准
 
@@ -120,7 +120,7 @@ LLM 版剩余两个错误都集中在 `get_alerts` 与 `get_comprehensive_alerts
 | JSON 有效率 | 83.3% |
 | P95 延迟 | 350 ms |
 
-![增强能力评测报告](/public/projects/agent-eval-workbench/enhanced-report.png)
+![增强能力评测报告](public/projects/agent-eval-workbench/enhanced-report.png)
 
 这组数据故意包含错误案例，主要用于验证评测器能否准确定位问题，而不是代表最终 Agent 的线上表现。
 

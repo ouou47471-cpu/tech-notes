@@ -42,11 +42,11 @@
 
 | 各州 GMV Top 10 | 月度 GMV 趋势 |
 | --- | --- |
-| ![各州 GMV](/public/projects/ecommerce-spark-analysis/01-state-sales.png) | ![月度趋势](/public/projects/ecommerce-spark-analysis/02-monthly-trend.png) |
+| ![各州 GMV](public/projects/ecommerce-spark-analysis/01-state-sales.png) | ![月度趋势](public/projects/ecommerce-spark-analysis/02-monthly-trend.png) |
 
 | 品类 GMV 排名 | RFM 客户分层 |
 | --- | --- |
-| ![品类排名](/public/projects/ecommerce-spark-analysis/03-category-ranking.png) | ![RFM 分层](/public/projects/ecommerce-spark-analysis/04-rfm-segmentation.png) |
+| ![品类排名](public/projects/ecommerce-spark-analysis/03-category-ranking.png) | ![RFM 分层](public/projects/ecommerce-spark-analysis/04-rfm-segmentation.png) |
 
 ## 实现要点（踩过的坑）
 

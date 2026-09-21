@@ -27,7 +27,7 @@
         "PRO-AUC 从 0.828 提升到 0.925，Cable 与 Capsule 等稀缺类别提升最明显。"
       ],
       "highlight": "双分支生成、注意力融合与下游增广验证",
-      "detailMarkdown": "/public/projects/focus-stylegan-augmentation/README.md"
+      "detailMarkdown": "public/projects/focus-stylegan-augmentation/README.md"
     },
     {
       "id": "industrial-sft-pipeline",
@@ -56,7 +56,7 @@
         "通过 133 张盲测样本验证过滤器区分度，并定位到生成器类别漂移导致的瓶身身份丢失。"
       ],
       "highlight": "在基础生成项目上扩展数据资产与质量评测",
-      "detailMarkdown": "/public/projects/industrial-sft-pipeline/README.md"
+      "detailMarkdown": "public/projects/industrial-sft-pipeline/README.md"
     },
     {
       "id": "sft-audit-kit",
@@ -86,7 +86,7 @@
         "将 614 条图片尺寸误报降为 0，并将重复文本告警由逐条输出压缩为 116 个问题组。"
       ],
       "highlight": "数据发布质量门禁与可追溯审计报告",
-      "detailMarkdown": "/public/projects/sft-audit-kit/README.md"
+      "detailMarkdown": "public/projects/sft-audit-kit/README.md"
     },
     {
       "id": "agent-eval-workbench",
@@ -117,7 +117,7 @@
         "LLM 版 60 条真实结果的结构化输出有效率为 100%。"
       ],
       "highlight": "Agent 多层评测与回归质量门禁",
-      "detailMarkdown": "/public/projects/agent-eval-workbench/README.md"
+      "detailMarkdown": "public/projects/agent-eval-workbench/README.md"
     },
     {
       "id": "air-quality-agent",
@@ -147,7 +147,7 @@
         "Agent、RAG、日报和 MCP 服务通过 FastAPI、Docker 与 SQLite 完成落地。"
       ],
       "highlight": "工具调用评测、RAG 溯源与可观测性",
-      "detailMarkdown": "/public/projects/air-quality-agent/README.md"
+      "detailMarkdown": "public/projects/air-quality-agent/README.md"
     },
     {
       "id": "pcba-defect-detection-repro",
@@ -178,7 +178,7 @@
         "定位并修复 5 类工程问题：OpenCV 中文路径静默失败、Paddle 静态图导出中文路径 mkdir failed、Paddle 缓存目录权限、验证环节漏 no_grad 导致内存暴涨、原脚本空结果 json 序列化崩溃。"
       ],
       "highlight": "标注同步增广 + 控制变量 A/B + 诚实的局限说明",
-      "detailMarkdown": "/public/projects/pcba-defect-detection-repro/README.md"
+      "detailMarkdown": "public/projects/pcba-defect-detection-repro/README.md"
     },
     {
       "id": "ecommerce-spark-analysis",
@@ -210,7 +210,7 @@
         "客户：真实客户 9.47 万、复购率仅 3.0%；RFM 高价值客户 603 人、人均 436 BRL，是低价值客户（57 BRL）的 7 倍以上。"
       ],
       "highlight": "真实客户识别 + GMV 双层口径 + 混合打分 RFM",
-      "detailMarkdown": "/public/projects/ecommerce-spark-analysis/README.md"
+      "detailMarkdown": "public/projects/ecommerce-spark-analysis/README.md"
     }
   ]
 }

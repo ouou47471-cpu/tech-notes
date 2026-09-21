@@ -16,7 +16,7 @@
 
 ## 系统架构
 
-![空气质量 Agent 架构](/public/projects/air-quality-agent/architecture.png)
+![空气质量 Agent 架构](public/projects/air-quality-agent/architecture.png)
 
 系统支持两条 Agent 路径：
 
@@ -27,7 +27,7 @@
 
 ## 看板运行截图
 
-![空气质量数据看板](/public/projects/air-quality-agent/dashboard.png)
+![空气质量数据看板](public/projects/air-quality-agent/dashboard.png)
 
 看板包含城市实时数据、城市对比、季节分布、污染物相关性、随机森林预测、批量预测和 AI 问答页签。
 
@@ -68,7 +68,7 @@ RAG 同时支持 Chroma 向量检索和零依赖关键词检索。
 
 ## 评测结果
 
-![工具选择评测结果](/public/projects/air-quality-agent/evaluation-summary.png)
+![工具选择评测结果](public/projects/air-quality-agent/evaluation-summary.png)
 
 评测使用同一套 60 条回归集，覆盖 10 个工具、6 个城市、4 类污染物和 12 条易混淆样本。
 

@@ -20,7 +20,7 @@
 600 张 2448x2048 的 PCBA 表面图像，VOC 格式标注，5 类缺陷：`short`、`skewing`、`tombstoning`、
 `solder_bridge`、`open_solder`，共 4552 个标注框。
 
-![数据集体检](/public/projects/pcba-defect-detection-repro/dataset-overview.png)
+![数据集体检](public/projects/pcba-defect-detection-repro/dataset-overview.png)
 
 | 指标 | 数值 | 说明 |
 | --- | ---: | --- |
@@ -44,7 +44,7 @@
   优化器 Momentum(0.9) + L2(5e-4)，分段学习率 1e-4；
 - 参数量 61.6M。
 
-![预测结果（彩色为预测框，灰色为真实框）](/public/projects/pcba-defect-detection-repro/prediction-508.jpg)
+![预测结果（彩色为预测框，灰色为真实框）](public/projects/pcba-defect-detection-repro/prediction-508.jpg)
 
 | 项 | 原版课程实验 | 我的本地复现 |
 | --- | --- | --- |
@@ -75,7 +75,7 @@
 **贴边框标 `truncated=1`**；整张图框全被切没了就丢弃该样本。挑图按类别缺口贪心（谁少补谁），
 并且**只增广训练集**——验证集增广等于把训练样本泄漏进评估，指标会虚高。
 
-![标注同步增广抽查](/public/projects/pcba-defect-detection-repro/annotated-augment-check.jpg)
+![标注同步增广抽查](public/projects/pcba-defect-detection-repro/annotated-augment-check.jpg)
 
 **怎么证明框没偏？** 不能靠肉眼看抽查图。我写了两层自动校验：
 
@@ -104,8 +104,8 @@
 | A（原图） | 237.46 / 96.16 / 90.63 / 98.61 | 2.07% | 9.09 | 0.63 | 0.54 | 0.08 | 0.00 |
 | B（增广） | 107.88 / 99.44 / 88.82 / **90.58** | **2.56%** | 7.14 | **5.05** | 0.47 | 0.07 | 0.08 |
 
-![loss 曲线对比](/public/projects/pcba-defect-detection-repro/ab-loss-curve.png)
-![mAP 与逐类 AP 对比](/public/projects/pcba-defect-detection-repro/ab-map-compare.png)
+![loss 曲线对比](public/projects/pcba-defect-detection-repro/ab-loss-curve.png)
+![mAP 与逐类 AP 对比](public/projects/pcba-defect-detection-repro/ab-map-compare.png)
 
 结论与反思：
 

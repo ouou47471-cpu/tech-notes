@@ -18,7 +18,7 @@
 
 ## 模型架构
 
-![Focus-StyleGAN 模型架构](/public/projects/focus-stylegan-augmentation/architecture.png)
+![Focus-StyleGAN 模型架构](public/projects/focus-stylegan-augmentation/architecture.png)
 
 Focus-StyleGAN 由四部分组成：
 
@@ -35,9 +35,9 @@ Focus-StyleGAN 由四部分组成：
 - 训练节奏：每训练 5 次判别器，训练 1 次生成器；100 epoch，batch size 8。
 - 超参数搜索：Optuna 贝叶斯优化 50 次试验，以验证集 FID 最小化为目标。
 
-![训练损失与收敛曲线](/public/projects/focus-stylegan-augmentation/training-curve.png)
+![训练损失与收敛曲线](public/projects/focus-stylegan-augmentation/training-curve.png)
 
-![Optuna 超参数搜索过程](/public/projects/focus-stylegan-augmentation/optuna-history.png)
+![Optuna 超参数搜索过程](public/projects/focus-stylegan-augmentation/optuna-history.png)
 
 ## 生成质量结果
 
@@ -50,7 +50,7 @@ Focus-StyleGAN 由四部分组成：
 | FocusGAN | 31.5 | 2.6 | 0.23 | 21.5 | 0.80 | 0.64 |
 | Focus-StyleGAN | 22.5 | 2.9 | 0.18 | 23.8 | 0.85 | 0.79 |
 
-![生成图像质量对比](/public/projects/focus-stylegan-augmentation/quality-comparison.png)
+![生成图像质量对比](public/projects/focus-stylegan-augmentation/quality-comparison.png)
 
 项目中还设计了 PPS 物理合理性得分，从几何一致性和光照一致性两个角度评价生成缺陷是否符合材料规律。Focus-StyleGAN 的 PPS 为 0.79，优于对比方法。
 
@@ -71,9 +71,9 @@ Focus-StyleGAN 由四部分组成：
 - Screw：Pixel-AUC 0.83 → 0.93，提升 12.0%。
 - 全部 15 个类别都取得正向提升。
 
-![Pixel-AUC 与 PRO-AUC 对比](/public/projects/focus-stylegan-augmentation/detection-comparison.png)
+![Pixel-AUC 与 PRO-AUC 对比](public/projects/focus-stylegan-augmentation/detection-comparison.png)
 
-![各工业类别 Pixel-AUC 提升](/public/projects/focus-stylegan-augmentation/per-class-improvement.png)
+![各工业类别 Pixel-AUC 提升](public/projects/focus-stylegan-augmentation/per-class-improvement.png)
 
 ## 消融实验
 
@@ -98,7 +98,7 @@ Focus-StyleGAN 由四部分组成：
 | 单分支生成器 | 34.2 | 2.5 | 0.27 | 背景常出现扭曲 |
 | 双分支生成器 | 22.5 | 2.9 | 0.18 | 缺陷更清晰，背景更自然 |
 
-![消融实验对比](/public/projects/focus-stylegan-augmentation/ablation-comparison.png)
+![消融实验对比](public/projects/focus-stylegan-augmentation/ablation-comparison.png)
 
 ## 工程实现
 
@@ -111,7 +111,7 @@ Focus-StyleGAN 由四部分组成：
 
 前端使用 HTML、CSS 和 JavaScript，后端基于 Flask、PyTorch 与 RESTful API。系统演示页面支持上传图像、自动匹配类别、生成缺陷、查看分析结果和批量处理。
 
-<video controls preload="metadata" playsinline poster="/public/projects/focus-stylegan-augmentation/system-demo.png"><source src="https://github.com/ouou47471-cpu/tech-notes/releases/download/project-media-assets/focus-stylegan-system-demo.mp4" type="video/mp4">你的浏览器不支持视频播放。</video>
+<video controls preload="metadata" playsinline poster="public/projects/focus-stylegan-augmentation/system-demo.png"><source src="https://github.com/ouou47471-cpu/tech-notes/releases/download/project-media-assets/focus-stylegan-system-demo.mp4" type="video/mp4">你的浏览器不支持视频播放。</video>
 
 ## 关键问题与解决方案
 

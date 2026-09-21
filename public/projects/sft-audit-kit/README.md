@@ -29,7 +29,7 @@ Audit Kit 不是重新训练模型，而是把数据管线中的一次性检查�
 
 ## 系统流程
 
-![SFT Audit Kit 架构](/public/projects/sft-audit-kit/architecture.png)
+![SFT Audit Kit 架构](public/projects/sft-audit-kit/architecture.png)
 
 工具首先读取 `dataset.jsonl`，根据同级 `manifest.json` 或 `--dataset-root` 解析图片路径，然后依次执行格式、图片、重复和泄漏检查，最后输出三份报告。
 
@@ -90,7 +90,7 @@ Audit Kit 不是重新训练模型，而是把数据管线中的一次性检查�
 
 116 条警告全部来自模板化 `instruction/response` 完全重复。工具按重复组聚合，避免同一问题被逐条放大。
 
-![1725 条真实数据审计报告](/public/projects/sft-audit-kit/audit-report.png)
+![1725 条真实数据审计报告](public/projects/sft-audit-kit/audit-report.png)
 
 ## 关键问题与解决方案
 

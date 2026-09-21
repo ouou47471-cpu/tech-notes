@@ -28,11 +28,11 @@
 
 ## 扩展项目结构
 
-![数据生产与质量过滤流程](/public/projects/industrial-sft-pipeline/pipeline-flow.png)
+![数据生产与质量过滤流程](public/projects/industrial-sft-pipeline/pipeline-flow.png)
 
 基础项目负责提供图像来源。扩展项目在此基础上增加程序化标注、VLM 改写、MD5 去重、JSONL 校验、VLM 三维质量过滤、盲测对照和版本化目录。
 
-![基础项目 Focus-StyleGAN 架构](/public/projects/industrial-sft-pipeline/architecture.png)
+![基础项目 Focus-StyleGAN 架构](public/projects/industrial-sft-pipeline/architecture.png)
 
 上图属于基础项目，作为扩展项目的模型来源说明保留。
 
@@ -67,13 +67,13 @@
 
 真实缺陷图全部通过质量过滤，平均分 4.72。VLM 在 83 张真实图中，有 82 张自发描述为“瓶”或瓶口结构。
 
-![真实缺陷样本](/public/projects/industrial-sft-pipeline/real-defect-samples.jpg)
+![真实缺陷样本](public/projects/industrial-sft-pipeline/real-defect-samples.jpg)
 
 ### 真实正常图
 
 真实正常图平均分 4.88，作为分布对照和过滤器召回结果的重要参照。
 
-![真实正常样本](/public/projects/industrial-sft-pipeline/real-good-samples.jpg)
+![真实正常样本](public/projects/industrial-sft-pipeline/real-good-samples.jpg)
 
 ### GAN 合成图
 
@@ -81,11 +81,11 @@ GAN 输出出现明显的类别漂移。50 张合成图中只有 24 张通过过
 
 这说明问题不是合成图不够多样，而是生成器持续输出错误类别。此现象应称为“类别漂移 / 身份丢失”，不能称为 mode collapse。
 
-![GAN 合成样本](/public/projects/industrial-sft-pipeline/gan-samples.jpg)
+![GAN 合成样本](public/projects/industrial-sft-pipeline/gan-samples.jpg)
 
 ### 过滤评测结果
 
-![VLM 盲测过滤结果](/public/projects/industrial-sft-pipeline/evaluation-summary.png)
+![VLM 盲测过滤结果](public/projects/industrial-sft-pipeline/evaluation-summary.png)
 
 ## 关键 Bug 与解决方案
 
